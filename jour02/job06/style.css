@@ -1,0 +1,16 @@
+/* Styles par défaut */
+body {
+    text-align: center;
+
+    background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles pour LaPlateforme_content */
+#LaPlateforme_content {
+    background-color: blue;
+    color: white;
+}
