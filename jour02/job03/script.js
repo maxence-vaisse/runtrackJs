@@ -1,8 +1,8 @@
 var compteur = 0;
 
-function addone() {
+function addOne() {
     compteur++;
     document.getElementById("compteur").textContent = compteur;
 }
 
-document.getElementById("button").addEventListener("click", addone);
+document.getElementById("button").addEventListener("click", addOne);
