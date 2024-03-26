@@ -1,0 +1,16 @@
+body {
+    min-height: 4096px;
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 0; /* Supprimer les rembourrages par défaut */
+    position: relative; /* Position relative pour les éléments enfants positionnés */
+}
+
+footer {
+    text-align: center; /* Aligner le texte au centre du footer */
+    position: fixed; /* Position fixe en bas de la fenêtre */
+    bottom: 0; /* Aligner le footer en bas de la fenêtre */
+    width: 100%; /* Prendre toute la largeur de la fenêtre */
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte du footer */
+    padding-bottom: 50px; /* Rembourrage pour le contenu du footer */
+}
