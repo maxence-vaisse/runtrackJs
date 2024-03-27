@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc-en-ciel</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        .dragging {
+            z-index: 1000; /* Mettre l'image en premier plan lors du déplacement */
+        }
+        #arc-en-ciel-reorganiser-container {
+            border: 2px dashed #000; /* Bordure en pointillés de 2px de couleur noire */
+            padding: 130px; /* Ajoute un espace intérieur de 20px pour plus de visibilité */
+            margin-top: 20px; /* Ajoute un espace en haut pour séparer visuellement la zone de jeu */
+        }
+    </style>
+</head>
+<body>
+    <section id="arc-en-ciel-container">
+        <div id="arc-en-ciel">
+            <img src="img/arc1.png" alt="Image 1" class="image" data-index="1">
+            <img src="img/arc2.png" alt="Image 2" class="image" data-index="2">
+            <img src="img/arc3.png" alt="Image 3" class="image" data-index="3">
+            <img src="img/arc4.png" alt="Image 4" class="image" data-index="4">
+            <img src="img/arc5.png" alt="Image 5" class="image" data-index="5">
+            <img src="img/arc6.png" alt="Image 6" class="image" data-index="6">
+        </div>
+        <button id="melanger">Mélanger</button>
+    </section>
+
+    <section id="arc-en-ciel-reorganiser">
+        <h2>Réorganiser l'arc-en-ciel</h2>
+        <div id="arc-en-ciel-reorganiser-container"></div>
+    </section>
+    
+    <div id="message"></div>
+</body>
+</html>
