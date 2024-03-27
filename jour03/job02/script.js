@@ -7,14 +7,14 @@ $(document).ready(function() {
 
     function verifierOrdre() {
         const imagesDansZone = $arcEnCielReorganiserContainer.find('.image').length;
-        if (imagesDansZone !== 6) { // Changer 6 par le nombre total d'images attendu
+        if (imagesDansZone !== 6) {
             $message.text('Vous avez perdu');
             $message.css('color', 'red');
             return;
         }
         
         let ordreCorrect = true;
-        $images.each(function(index) {
+        $arcEnCielReorganiserContainer.find('.image').each(function(index) {
             const indexAttendu = index + 1;
             const indexImage = parseInt($(this).attr('data-index'));
             if (indexImage !== indexAttendu) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
             drop: function(event, ui) {
                 const $droppedImage = ui.draggable;
                 $droppedImage.appendTo($(this));
-                verifierOrdre(); // Vérifie l'ordre après le déplacement dans la nouvelle zone
+                verifierOrdre(); 
             }
         });
 
