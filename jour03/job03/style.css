@@ -1,0 +1,29 @@
+
+
+#taquin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#MessageOfVictory {
+    display: none;
+    margin-top: 20px;
+}
