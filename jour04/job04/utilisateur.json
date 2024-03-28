@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "nom": "Vaisse",
+      "prenom": "Maxence",
+      "email": "maxence.vaisse@laplateforme.io"
+    },
+    {
+      "id": 2,
+      "nom": "Roulin",
+      "prenom": "Pauline",
+      "email": "pauline.roulin@laplateforme.io"
+    },
+    {
+      "id": 3,
+      "nom": "Dossetto",
+      "prenom": "Fabio",
+      "email": "fabio.dossetto@laplateforme.io"
+    },
+    {
+      "id": 4,
+      "nom": "Bouyer",
+      "prenom": "Jules",
+      "email": "jules.bouyer@laplateforme.io"
+    }
+  ]
+  
