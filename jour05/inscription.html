@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page d'inscription</title>
+</head>
+<body>
+
+    <header>
+        <nav id="Menu">
+            <ul>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+
+        <h1>Inscription</h1>
+    </header>
+
+    <main>
+        <form id="registerForm">
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <div id="lastname-error" class="error-message"></div>
+
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <div id="firstname-error" class="error-message"></div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <div id="email-error" class="error-message"></div>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+            <div id="password-error" class="error-message"></div>
+
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" required>
+            <div id="address-error" class="error-message"></div>
+
+            <label for="CodePostal">Code Postal</label>
+            <input type="text" id="CodePostal" name="CodePostal" required>
+            <div id="CodePostal-error" class="error-message"></div>
+            
+            <button type="submit">Inscription</button>
+        </form>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

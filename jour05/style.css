@@ -1,0 +1,60 @@
+/* CSS Général */
+
+body {
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0080ff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div {
+    margin-bottom: 30px;
+    color: red  ;
+}
+
+/* CSS du formulaire connexion.html */
+
+#email {
+    margin-bottom: 30px;
+}
+
+#password {
+    margin-bottom: 30px;
+}
+
+/* CSS du formulaire inscription.html */
+
+#firstname {
+    margin-bottom: 30px;
+}
+
+#lastname {
+    margin-bottom: 30px;
+}
+
+#email {
+    margin-bottom: 30px;
+}
+
+#password {
+    margin-bottom: 30px;
+}
+
+#address {
+    margin-bottom: 30px;
+}
+
+#CodePostal {
+    margin-bottom: 30px;
+}
