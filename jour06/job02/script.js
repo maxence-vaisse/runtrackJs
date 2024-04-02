@@ -109,3 +109,54 @@
             modal.style.display = 'none';
           }
         }
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const submitButton = document.querySelector('.btn-primary');
+          const emailInput = document.querySelector('input[type="text"]');
+          const passwordInput = document.querySelectorAll('input[type="password"]')[0];
+          const spinner = document.querySelector('.jumbotron .spinner-border');
+      
+          submitButton.addEventListener('click', function() {
+              // Vérifier si l'email et le mot de passe ne sont pas vides
+              if (emailInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+                  // Générer un nombre aléatoire pour choisir une couleur de spinner
+                  const randomColorIndex = Math.floor(Math.random() * 8);
+      
+                  // Retirer toutes les classes de couleur du spinner
+                  spinner.classList.remove('text-primary', 'text-secondary', 'text-success', 'text-danger', 'text-warning', 'text-info', 'text-light', 'text-dark');
+      
+                  // Ajouter la classe de couleur au spinner en fonction du nombre aléatoire généré
+                  switch (randomColorIndex) {
+                      case 0:
+                          spinner.classList.add('text-primary');
+                          break;
+                      case 1:
+                          spinner.classList.add('text-secondary');
+                          break;
+                      case 2:
+                          spinner.classList.add('text-success');
+                          break;
+                      case 3:
+                          spinner.classList.add('text-danger');
+                          break;
+                      case 4:
+                          spinner.classList.add('text-warning');
+                          break;
+                      case 5:
+                          spinner.classList.add('text-info');
+                          break;
+                      case 6:
+                          spinner.classList.add('text-light');
+                          break;
+                      case 7:
+                          spinner.classList.add('text-dark');
+                          break;
+                      default:
+                          spinner.classList.add('text-primary');
+                  }
+              }
+          });
+      });
+      
