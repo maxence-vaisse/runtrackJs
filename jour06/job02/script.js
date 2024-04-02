@@ -72,3 +72,40 @@
           rightButton.addEventListener("click", progressForward);
         });
         
+
+        document.addEventListener('keydown', function(event) {
+          const key = event.key.toLowerCase();
+          if (key === 'd' || key === 'g' || key === 'c') {
+            const sequence = ['d', 'g', 'c'];
+            const pressedKeys = [];
+            document.addEventListener('keydown', function(event) {
+              pressedKeys.push(event.key.toLowerCase());
+              if (pressedKeys.join('') === sequence.join('')) {
+                const modal = document.getElementById('myModal');
+                modal.style.display = 'block';
+                // Récupérer les valeurs du formulaire et les afficher dans la modale
+                const formData = new FormData(document.getElementById('container1'));
+                let modalContent = '';
+                for (const [key, value] of formData.entries()) {
+                  modalContent += key + ': ' + value + '<br>';
+                }
+                document.getElementById('modalContent').innerHTML = modalContent;
+              }
+            });
+          }
+        });
+        
+        // Fermer la modale lorsque l'utilisateur clique sur le bouton de fermeture (x)
+        const closeButton = document.getElementsByClassName('close')[0];
+        closeButton.onclick = function() {
+          const modal = document.getElementById('myModal');
+          modal.style.display = 'none';
+        }
+        
+        // Fermer la modale lorsque l'utilisateur clique en dehors de celle-ci
+        window.onclick = function(event) {
+          const modal = document.getElementById('myModal');
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        }
