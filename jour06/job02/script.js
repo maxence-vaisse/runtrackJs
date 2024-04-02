@@ -42,3 +42,33 @@
           // Changer le contenu du jumbotron selon la page sélectionnée
           document.querySelector('.jumbotron p:nth-of-type(2)').textContent = contentArray[contentIndex];
         }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const progressBar = document.querySelector(".progress-bar");
+          const leftButton = document.querySelector(".bi-arrow-bar-left");
+          const rightButton = document.querySelector(".bi-arrow-bar-right");
+        
+          // Fonction pour avancer la barre de progression
+          function progressForward() {
+            let currentValue = parseFloat(progressBar.style.width);
+            if (currentValue < 100) {
+              progressBar.style.width = (currentValue + 5) + "%"; // Avancer de 5%
+              progressBar.setAttribute("aria-valuenow", currentValue + 5);
+            }
+          }
+        
+          // Fonction pour reculer la barre de progression
+          function progressBackward() {
+            let currentValue = parseFloat(progressBar.style.width);
+            if (currentValue > 0) {
+              progressBar.style.width = (currentValue - 5) + "%"; // Reculer de 5%
+              progressBar.setAttribute("aria-valuenow", currentValue - 5);
+            }
+          }
+        
+          // Ajout des écouteurs d'événements sur les boutons
+          leftButton.addEventListener("click", progressBackward);
+          rightButton.addEventListener("click", progressForward);
+        });
+        
