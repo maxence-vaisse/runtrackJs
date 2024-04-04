@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="bg-yellow-400">
+        <nav>
+            <ul class="flex justify-center space-x-10 py-6">
+                <li><a href="index.html" class="">Accueil</a></li>
+                <li><a href="index.html" class="">Inscription</a></li>
+                <li><a href="index.html" class="">Connexion</a></li>
+                <li><a href="index.html" class="">Rechercher</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <select class="genre" name="Genre">
+                <option value="Genre">Genre</option>
+                <option value="Monsieur">Monsieur</option>
+                <option value="Madame">Madame</option>
+            </select>
+            <input type="text" name="Nom" placeholder="Nom">
+            <input type="text" name="Prénom" placeholder="Prénom">
+            <input type="adresse" name="Adresse" placeholder="Adresse">
+            <input type="email" name="Email" placeholder="Email">
+            <input type="password" name="Mot de passe" placeholder="Mot de passe">
+            <input type="checkbox" name="Passions" value="Informatique">Informatique
+            <input type="checkbox" name="Passions" value="Voyages">Voyages
+            <input type="checkbox" name="Passions" value="Sport">Sport
+            <input type="checkbox" name="Passions" value="Lecture">Lecture
+            <button type="submit">Valider et Envoyer le formulaire</button>
+        </form>
+    </main>
+
+    <footer class="bg-gray-600 text-center">
+        <ul>
+            <li><a href="index.html" class="text-pink-500">Accueil</a></li>
+            <li><a href="index.html" class="text-pink-500">Inscription</a></li>
+            <li><a href="index.html" class="text-pink-500">Connexion</a></li>
+            <li><a href="index.html" class="text-pink-500">Rechercher</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
