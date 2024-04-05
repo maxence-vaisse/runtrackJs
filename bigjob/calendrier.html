@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header>
+        <nav class="bg-yellow-400 p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold"><img src="assets/images/laplateforme.png"></a>
+                <ul class="flex">
+                    <li class="mx-2"><a href="#" class="text-white hover:text-sky-800">Accueil</a></li>
+                    <li class="mx-2"><a href="#" class="text-white hover:text-sky-800">L'école</a></li>
+                    <li class="mx-2"><a href="#" class="text-white hover:text-sky-800">Nos Services</a></li>
+                    <li class="mx-2"><a href="#" class="text-white hover:text-sky-800">Nous Contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="py-20">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-bold text-center">Calendrier La Plateforme</h1>
+                <p class="text-center text-gray-500 mt-4">Vous pouvez consulter les évènements à venir ou alors en ajouter.</p>
+            </div>
+        </section>
+    </header>
+    
+    <div class="container mx-auto mt-4">
+        <table class="table-auto mx-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Date</th>
+                    <th class="px-4 py-2">Événement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">2024-04-10</td>
+                    <td class="border px-4 py-2">Cours de Mathématiques</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">2024-04-15</td>
+                    <td class="border px-4 py-2">Présentation Projet</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">2024-04-20</td>
+                    <td class="border px-4 py-2">Examen Final</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="container mx-auto mt-4 text-center">
+            <h2 class="text-2xl font-bold my-2">Demande d'autorisation de présence</h2>
+            <form class="mx-auto my-4">
+                <label for="date" class="block mb-2">Date de l'événement:</label>
+                <input type="date" id="date" name="date" class="border rounded px-4 py-2 mb-2" required><br>
+                <label for="motif" class="block mb-2">Motif de la demande:</label>
+                <textarea id="motif" name="motif" rows="4" cols="50" class="border rounded px-4 py-2 mb-2" required></textarea><br>
+                <input type="submit" value="Envoyer la demande" class="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">
+            </form>
+        </div>
+    </div>
+    <script src="scripts/calendar.js"></script>
+</body>
+</html>
