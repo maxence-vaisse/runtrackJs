@@ -9,7 +9,7 @@
         <title>Document</title>
     </head>
     <body>
-        <header>
+        <header class=" w-full fixed">
             <nav class="bg-green-800">
                 <div class="mx-10">
                     <ul class="flex justify-between items-center p-8">
@@ -41,9 +41,10 @@
         </header>
 
         <main>
-            <section class="bg-white text-green-800">
+            <div class="bg-cover bg-fixed bg-center h-screen" style="background-image: url(images/fond.jpg);">
+            <section class="text-green-800">
                 <div class="mx-10 py-20 text-center">
-                    <h1 class="text-4xl font-bold">Bienvenue sur l'art du code</h1>
+                    <h1 class="text-4xl font-bold mt-10">Bienvenue sur l'art du code</h1>
                     <p class="text-lg">Le blog qui vous apprend à coder</p>
                 </div>
             </section>
@@ -76,22 +77,72 @@
                     </div>
                 </div>
             </section>
-        </main>
 
-        <footer>
-            <section class="bg-green-800 text-white">
-                <div class="mx-10 py-20 text-center">
-                    <h2 class="text-2xl font-bold">Contactez-nous</h2>
-                    <p class="text-lg">Vous avez une question ? N'hésitez pas à nous contacter</p>
-                    <form action="" method="post" class="mt-8">
-                        <div class="flex justify-center items-center gap-x-4">
-                            <input type="text" name="email" placeholder="Votre email" class="rounded-md px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                            <button type="submit" class="rounded-md bg-green-200 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:text-black hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Envoyer</button>
-
-                        </div>
-                    </form>
+            <section>
+                <div class="mx-10 py-20 text-white">
+                    <h2 class="text-2xl font-bold text-center">A propos</h2>
+                    <p class="text-lg text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio nec odio
+                        fermentum pharetra. Nulla facilisi. Nullam nec eros nec eros tincidunt
+                        fermentum. Nullam nec eros nec eros tincidunt fermentum. Nullam nec eros
+                        nec eros tincidunt fermentum. Nullam nec eros nec eros tincidunt fermentum.
+                        Nullam nec eros nec eros tincidunt fermentum. Nullam nec eros nec eros
+                    </p>
                 </div>
             </section>
+        </div>
+        </main>
+
+        <footer class="bg-green-800">
+            <div class="mx-auto max-w-lg px-4">
+                <form>
+                    <div class="sm:col-span-3">
+                        <label for="country" class="block text-sm font-medium leading-6 text-white">Genre</label>
+                        <div class="mt-2">
+                          <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option>Homme</option>
+                            <option>Femme</option>
+                          </select>
+                        </div>
+                      </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="sm:col-span-3">
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-white"><i class="fas fa-user"></i> Prénom</label>
+                          <div class="mt-2">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                          </div>
+                        </div>
+                
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm font-medium leading-6 text-white"><i class="fas fa-user"></i> Nom</label>
+                        <div class="mt-2">
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="email" class="block text-sm font-medium leading-6 text-white"><i class="fas fa-map-marker-alt"></i> Adresse Postal</label>
+                        <div class="mt-2">
+                          <input id="adress" name="adress" type="adress" autocomplete="adress" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                      </div>
+                    <div class="sm:col-span-2">
+                        <label for="email" class="block text-sm font-medium leading-6 text-white"><i class="fas fa-envelope"></i> Email address</label>
+                        <div class="mt-2">
+                          <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                      </div>
+                      <div class="sm:col-span-2">
+                        <label for="email" class="block text-sm font-medium leading-6 text-white"><i class="fas fa-lock"></i> Mots de passe</label>
+                        <div class="mt-2">
+                          <input id="password" name="password" type="password" autocomplete="password" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                      </div>
+                    </div>         
+                    <div class="mt-10 space-y-10">
+                        <div class="mt-6 mb-4 flex items-center justify-center gap-x-6">
+                            <button type="submit" class="rounded-md bg-green-200 px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sauvegarder</button>
+                        </div>   
+                    </form>
+                </div>
         </footer>
     </body>
 </html>
