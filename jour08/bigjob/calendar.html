@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-yellow-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="assets/logo_laplateforme.png" width="250" height="auto"></a>
+            <nav class="flex space-x-4">
+                <button id="logoutBtn" >Déconnexion</button>
+                <a href="https://laplateforme.io/qui-sommes-nous/" class="text-white hover:text-gray-300">Qui somme-nous ?</a>
+                <a href="https://laplateforme.io/bachelor-it/" class="text-white hover:text-gray-300">Cursus</a>
+                <a href="https://laplateforme.io/master-it-business/" class="text-white hover:text-gray-300">Spécialisation</a>
+                <a href="https://laplateforme.io/entreprise/" class="text-white hover:text-gray-300">Entreprise</a>
+            </nav>
+        </div>
+    </header>
+</body>
+
+    <section class="flex-grow px-4 py-8">
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div class="p-6 space-y-4">
+                <form id="authorization-form">
+                    <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date de présence :</label>
+                    <input type="date" id="date" required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <button type="submit" class="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Demander l'autorisation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-yellow-400 py-4">
+        <div class="container mx-auto text-center text-white">
+            <p>&copy; 2024 La Plateforme. Tous droits réservés.</p>
+        </div>
+    </footer>    
+    <script src="scripts/calendar.js"></script>
+</body>
+
+</html>

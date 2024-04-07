@@ -1,0 +1,39 @@
+{
+    "utilisateurs": [
+        {
+            "username": "William Rauwe",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "Azerty19@"
+        },
+        {
+            "username": "William Rauwens",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "William19@"
+        },
+        {
+            "username": "William Rauwens OLiver",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "William18@"
+        },
+        {
+            "username": "William egegeg",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "Azerty19@"
+        },
+        {
+            "username": "William Rauwe",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "William19@"
+        },
+        {
+            "username": "William Rauwe",
+            "email": "william.rauwens-oliver@laplateforme.io",
+            "password": "William19@"
+        },
+        {
+            "username": "William Rauwe",
+            "email": "william.rauwensoliver@laplateforme.io",
+            "password": "Azerty19@"
+        }
+    ]
+}

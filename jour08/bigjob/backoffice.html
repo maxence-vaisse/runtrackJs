@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-yellow-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html"><img src="assets/logo_laplateforme.png" width="250" height="auto"></a>
+            <nav class="flex space-x-4">
+                <a href="/api/logout" class="text-white hover:text-gray-300">Déconnexion</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <h2 class="text-2xl font-bold mb-4">Demandes d'autorisation</h2>
+        <div id="authorization-requests" class="bg-white shadow overflow-hidden sm:rounded-lg">
+            <!-- Les demandes d'autorisation seront affichées ici -->
+        </div>
+    </main>
+
+    <footer class="bg-yellow-400 py-4">
+        <div class="container mx-auto text-center text-white">
+            <p>&copy; 2024 La Plateforme. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/authorization-requests')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors de la récupération des demandes d\'autorisation');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const authorizationRequestsContainer = document.getElementById('authorization-requests');
+                    authorizationRequestsContainer.innerHTML = '';
+                    data.forEach(request => {
+                        const requestItem = document.createElement('div');
+                        requestItem.classList.add('p-4', 'border-b', 'border-gray-200');
+                        requestItem.innerHTML = `
+                            <h3 class="text-lg font-semibold">${request.date}</h3>
+                            <p class="text-sm text-gray-600">État: ${request.status}</p>
+                            <div class="flex justify-end">
+                                <button onclick="acceptRequest('${request.id}')" class="bg-green-500 text-white px-4 py-2 rounded-md mr-2">Accepter</button>
+                                <button onclick="rejectRequest('${request.id}')" class="bg-red-500 text-white px-4 py-2 rounded-md">Refuser</button>
+                            </div>
+                        `;
+                        authorizationRequestsContainer.appendChild(requestItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                });
+        });
+
+        function acceptRequest(requestId) {
+            fetch('/api/accept-request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ requestId }),
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors de l\'acceptation de la demande');
+                    }
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                });
+        }
+
+        function rejectRequest(requestId) {
+            fetch('/api/reject-request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ requestId }),
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors du refus de la demande');
+                    }
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
